@@ -4,6 +4,8 @@ here is an driver list that seledroid can use
 Update
 ------
 
+[chromium 1.0.7](https://github.com/luanon404/seledroid-drivers/issues/8)
+
 [chromium 1.0.6](https://github.com/luanon404/seledroid-drivers/issues/7)
 
 [chromium 1.0.5](https://github.com/luanon404/seledroid-drivers/issues/6)
