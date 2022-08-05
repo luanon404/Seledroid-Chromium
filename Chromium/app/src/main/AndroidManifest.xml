@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='utf-8'?>
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.luanon.chromium">
+
+    <!-- có quyền truy cập mạng đầy đủ -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <!-- chạy dịch vụ trên nền trước -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+
+    <!-- ngăn điện thoại chuyển sang chế độ ngủ -->
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+
+    <!-- Ứng dụng này có thể xuất hiện ở phía trên cùng của các ứng dụng khác -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:hardwareAccelerated="true"
+        android:name=".MainApplication"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name=".SplashActivity"
+			android:resizeableActivity="true"
+			android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:launchMode="singleTask"
+			android:supportsPictureInPicture="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".MainActivity"
+			android:resizeableActivity="true"
+			android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:launchMode="singleTask"
+			android:supportsPictureInPicture="true"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".DebugActivity"
+            android:screenOrientation="portrait"/>
+
+        <service
+			android:name=".MainService"
+			android:exported="true">
+            <intent-filter>
+                <action android:name="com.luanon.chromium.MainService"/>
+            </intent-filter>
+        </service>
+		
+        <receiver
+            android:name=".StopServiceBroadCast"
+            android:enabled="true"/>
+
+    </application>
+
+</manifest>

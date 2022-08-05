@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<color name="colorSplash">#ffffff</color>
+    <color name="colorAccentWT">@color/colorLightRed</color>
+    <color name="colorAccentBT">@color/colorLightGreen</color>
+	<color name="colorWhite">#FFFFFF</color>
+	<color name="colorBlack">#000000</color>
+    <color name="colorLightBlack">#232323</color>
+    <color name="colorLightGray">#949494</color>
+	<color name="colorDeepGray">#686868</color>
+	<color name="colorLightGreen">#90EE90</color>
+	<color name="colorLightRed">#FF7F7F</color>
+	<color name="colorDarkGray">#353839</color>
+</resources>

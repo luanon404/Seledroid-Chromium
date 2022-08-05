@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical">
+
+	<androidx.appcompat.widget.Toolbar
+		android:id="@+id/toolbar"
+		android:background="@color/colorWhite"
+		android:layout_width="match_parent"
+		android:layout_height="50dp"
+		android:focusable="true"
+		android:padding="7dp"
+		android:focusableInTouchMode="true"
+		android:layout_alignParentTop="true"
+		android:gravity="center">
+
+		<EditText
+			android:id="@+id/url_box"
+			android:background="@drawable/url_box_background"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:singleLine="true"
+			android:gravity="center"
+			android:inputType="textNoSuggestions"
+			android:textColor="@color/colorDarkGray"
+			android:padding="5dp"/>
+
+	</androidx.appcompat.widget.Toolbar>
+
+	<ProgressBar
+		android:id="@+id/progress_bar"
+		android:layout_width="match_parent"
+		android:layout_height="3dp"
+		android:layout_below="@id/toolbar"
+		style="?android:attr/progressBarStyleHorizontal"/>
+
+	<WebView
+		android:id="@+id/webview"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_below="@id/progress_bar"/>
+
+</RelativeLayout>
+
