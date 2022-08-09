@@ -1,6 +1,9 @@
 # seledroid-drivers
 here is an driver list that seledroid can use
 
+# Welcome
+this is the foundation for you to create your own webdriver, because i am a newbie so i can only do this, hope you will do better than me ;).
+
 Update
 ------
 
