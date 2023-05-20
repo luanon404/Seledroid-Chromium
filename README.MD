@@ -9,4 +9,4 @@ News
 Download
 --------
 
-- **Seledroid:** [Chromium](https://github.com/luanon404/android-webdrivers/tree/main/Apk-Android-WebDrivers/Chromium)
+- Seledroid: [Chromium](https://github.com/luanon404/android-webdrivers/tree/main/Apk-Android-WebDrivers/Chromium)
