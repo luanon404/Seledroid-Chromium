@@ -1,64 +1,68 @@
-<?xml version='1.0' encoding='utf-8'?>
-<manifest
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.luanon.chromium">
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- có quyền truy cập mạng đầy đủ -->
-    <uses-permission android:name="android.permission.INTERNET"/>
-
-    <!-- chạy dịch vụ trên nền trước -->
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
-
-    <!-- ngăn điện thoại chuyển sang chế độ ngủ -->
-    <uses-permission android:name="android.permission.WAKE_LOCK"/>
-
-    <!-- Ứng dụng này có thể xuất hiện ở phía trên cùng của các ứng dụng khác -->
-    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
 
     <application
+        android:name=".Application"
         android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:hardwareAccelerated="true"
-        android:name=".MainApplication"
-        android:theme="@style/AppTheme">
-
+        android:supportsRtl="true"
+        android:theme="@style/Base.Theme.SeledroidChromium"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
         <activity
             android:name=".SplashActivity"
-			android:resizeableActivity="true"
-			android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:exported="true"
             android:launchMode="singleTask"
-			android:supportsPictureInPicture="true"
-            android:screenOrientation="portrait">
+            android:resizeableActivity="true"
+            android:supportsPictureInPicture="true">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <data
+                    android:host="com.luanon.seledroid.chromium"
+                    android:scheme="webdriver" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
             </intent-filter>
         </activity>
 
         <activity
             android:name=".MainActivity"
-			android:resizeableActivity="true"
-			android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
-            android:launchMode="singleTask"
-			android:supportsPictureInPicture="true"
-            android:screenOrientation="portrait"/>
-
-        <activity
-            android:name=".DebugActivity"
-            android:screenOrientation="portrait"/>
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:exported="false"
+            android:launchMode="standard"
+            android:resizeableActivity="true"
+            android:supportsPictureInPicture="true" />
 
         <service
-			android:name=".MainService"
-			android:exported="true">
+            android:name=".MainService"
+            android:launchMode="standard"
+            android:exported="true">
             <intent-filter>
-                <action android:name="com.luanon.chromium.MainService"/>
+                <action android:name="com.luanon.seledroid.chromium.MainService" />
             </intent-filter>
         </service>
-		
+
+
         <receiver
             android:name=".StopServiceBroadCast"
-            android:enabled="true"/>
+            android:enabled="true" />
 
     </application>
 

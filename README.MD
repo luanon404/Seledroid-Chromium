@@ -1,2 +1,3 @@
-# This project has ended. Thank you for using it. ^^
-### You can follow [luanon](https://github.com/luanon404/luanon) project for new webdriver.
+# Note
+
+- This project has been **deprecated** and has moved to [luanon](https://github.com/luanon404/luanon).

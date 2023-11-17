@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="actionBarSize">50dp</dimen>
+    <dimen name="actionBarMenuTextSize">24sp</dimen>
+    <dimen name="actionBarMenuIconPadding">10dp</dimen>
+    <dimen name="splashIconPadding">30dp</dimen>
+</resources>

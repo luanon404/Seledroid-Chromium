@@ -1,4 +1,4 @@
-package com.luanon.chromium;
+package com.luanon.seledroid.chromium;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;

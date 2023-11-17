@@ -2,6 +2,7 @@
 <RelativeLayout
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
 	android:orientation="vertical">
@@ -26,7 +27,8 @@
 			android:gravity="center"
 			android:inputType="textNoSuggestions"
 			android:textColor="@color/colorDarkGray"
-			android:padding="5dp"/>
+			android:padding="5dp"
+			tools:ignore="TextFields" />
 
 	</androidx.appcompat.widget.Toolbar>
 
